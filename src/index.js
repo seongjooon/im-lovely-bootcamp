@@ -1,6 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { render } from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import App from './containers/App';
+import rootReducer from './reducers';
+import './index.css';
+
+const store = createStore(rootReducer);
+
+render(
+  <Provider store={store}>
+    <Router>
+      <Route path='/:filter?' component={App} />
+    </Router>
+  </Provider>,
+  document.getElementById('root')
+);
