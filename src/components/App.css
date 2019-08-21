@@ -1,44 +1,10 @@
+body {
+  background-color: rgb(77, 77, 71);
+}
+
 .App {
   width: 400px;
   height: 711px;
   margin: auto;
-  border: solid;
-  overflow: auto;
+  background-color: white;
 }
-
-header {
-  width: 400px;
-  height: 65px;
-  border: solid;
-  font-size: 1.3rem;
-  font-weight: 500;
-  text-align: center;
-  position: fixed;
-  display: inline-block;
-}
-
-.chat-element {
-  width: 100%;
-  height: 87px;
-  border: solid;
-}
-
-
-.chat-element > img {
-  display: inline-block;
-  width: 86.5px;
-  height: 100%;
-}
-
-.chat-element-right-box {
-  display: inline-block;
-}
-
-.chat-element-right-box .user-name {
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-
-/* .chat-element .user-text {
-
-} */

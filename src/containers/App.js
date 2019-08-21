@@ -1,10 +1,13 @@
 import { connect } from 'react-redux';
 import App from '../components/App';
 import { getChatsList } from '../api';
+import { getDetailChat } from '../api';
 
 const mapStateToProps = state => {
   return {
-    chatList: state.chatListReducer
+    chatList: state.chatListReducer,
+    detailChat: state.detailChatReducer,
+    userId: state.selectUser
   };
 };
 
@@ -17,6 +20,20 @@ const mapDispatchToProps = dispatch => {
           chatList
         });
       });
+    },
+    getDetailChatFile() {
+      getDetailChat().then(detailChat => {
+        dispatch({
+          type: 'GET_DETAIL_CHAT',
+          detailChat
+        });
+      });
+    },
+    selectUser(id) {
+        dispatch({
+          type: 'SELECT_USER',
+          id
+        });
     }
   };
 };

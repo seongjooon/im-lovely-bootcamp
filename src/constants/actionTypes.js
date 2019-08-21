@@ -1,3 +1,5 @@
-export const SEND_MESSAGE = 'SEND_MESSAGE';
-export const REQUEST_CHAT_LIST = 'REQUEST_CHAT_LIST';
+export const LOADING_ON = 'LOADING_ON';
 export const INITIALIZE_CHAT_LIST = 'INITIALIZE_CHAT_LIST';
+export const SELECT_USER = 'SELECT_USER';
+export const SEND_MESSAGE = 'SEND_MESSAGE';
+export const GET_DETAIL_CHAT = 'GET_DETAIL_CHAT';
