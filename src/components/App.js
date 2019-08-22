@@ -12,8 +12,14 @@ class App extends Component {
   }
 
   render() {
-    const { chatList, detailChat, selectUser } = this.props;
-
+    const {
+      chatList,
+      detailChat,
+      selectUser,
+      setCurDetailChat,
+      curDetailChat,
+      sendMsg
+    } = this.props;
     return (
       <div className='App'>
         <Switch>
@@ -21,14 +27,23 @@ class App extends Component {
           <Route path='/home' render={() => <Home chatList={chatList} />} />
           <Route
             path='/chat_room/:userId'
-            render={props => (
-              <ChatRoom
-                {...props}
-                chatList={chatList}
-                detailChat={detailChat}
-                selectUser={selectUser}
-              />
-            )}
+            render={props => {
+              if (!curDetailChat.length) {
+                setCurDetailChat(detailChat);
+              }
+
+              if (curDetailChat) {
+                return (
+                  <ChatRoom
+                    {...props}
+                    chatList={chatList}
+                    detailChat={curDetailChat}
+                    selectUser={selectUser}
+                    sendMsg={sendMsg}
+                  />
+                );
+              }
+            }}
           />
         </Switch>
       </div>

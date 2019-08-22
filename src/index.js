@@ -9,6 +9,7 @@ import rootReducer from './reducers';
 import './index.css';
 
 const store = createStore(rootReducer);
+const rootEL = document.getElementById('root');
 
 render(
   <Provider store={store}>
@@ -16,5 +17,5 @@ render(
       <App />
     </Router>
   </Provider>,
-  document.getElementById('root')
+  rootEL
 );

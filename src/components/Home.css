@@ -3,14 +3,14 @@ header {
   width: 400px;
   height: 70px;
   color: #D1D1D6;
-  background-color: #3B3D4D;
+  background-color: #3C3D4C;
 }
 
 header > .header-text {
   height: 70px;
   padding-top: 24px;
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 600;
   font-family: 'Allerta', sans-serif;
   text-align: center;
 }

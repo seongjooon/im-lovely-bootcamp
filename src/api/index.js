@@ -4,7 +4,18 @@ import chatDetailData from '../data/chatDetail.json';
 export const getChatsList = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(chatData);
+      const chatListData = chatData.map(user => {
+        const chatList = chatDetailData.filter(msg => user.id === msg.user_id);
+        const lastMsg = chatList[chatList.length -1];
+        
+        return {
+          id: user.id,
+          userName: user.user_name,
+          lastMsg: lastMsg,
+          userImage: user.user_image
+        };
+      });
+      resolve(chatListData);
     }, 1000);
   });
 };
@@ -14,5 +25,5 @@ export const getDetailChat = () => {
     setTimeout(() => {
       resolve(chatDetailData);
     }, 1000);
-  })
+  });
 };

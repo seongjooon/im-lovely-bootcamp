@@ -12,11 +12,13 @@ const Home = ({ chatList }) => {
         {chatList.map(chatEl => (
           <Link to={`/chat_room/${chatEl.id}`} key={chatEl.id}>
             <div className='chat-element' key={chatEl.id}>
-              <img src={chatEl.user_image} alt={chatEl.id} />
+              <img src={chatEl.userImage} alt={chatEl.id} />
               <div className='chat-element-right-box'>
-                <div className='last-msg-time'>{chatEl.last_msg_time}</div>
-                <div className='user-name'>{chatEl.user_name}</div>
-                <div className='user-text'>{chatEl.text}</div>
+                <div className='last-msg-time'>
+                  {chatEl.lastMsg.created_at}
+                </div>
+                <div className='user-name'>{chatEl.userName}</div>
+                <div className='user-text'>{chatEl.lastMsg.text}</div>
               </div>
             </div>
           </Link>

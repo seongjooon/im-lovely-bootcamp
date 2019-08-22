@@ -7,7 +7,9 @@ const mapStateToProps = state => {
   return {
     chatList: state.chatListReducer,
     detailChat: state.detailChatReducer,
-    userId: state.selectUser
+    userId: state.selectUser,
+    curDetailChat: state.curDetailChat,
+    sendedMsg: state.sendMsgReducer
   };
 };
 
@@ -30,10 +32,30 @@ const mapDispatchToProps = dispatch => {
       });
     },
     selectUser(id) {
-        dispatch({
-          type: 'SELECT_USER',
-          id
-        });
+      dispatch({
+        type: 'SELECT_USER',
+        id
+      });
+    },
+    setCurDetailChat(detailChats) {
+      dispatch({
+        type: 'SET_NEW_DETAIL_CHAT',
+        detailChats
+      });
+    },
+    sendMsg(msg) {
+      console.log('sendMsg dispatch');
+      dispatch({
+        type: 'SEND_MESSAGE',
+        myMsg: [
+          {
+            id: 666,
+            user_id: 0,
+            created_at: '10:31',
+            text: msg
+          }
+        ]
+      });
     }
   };
 };
