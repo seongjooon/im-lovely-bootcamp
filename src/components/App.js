@@ -24,25 +24,27 @@ class App extends Component {
       <div className='App'>
         <Switch>
           <Route exact path='/' render={() => <Redirect to='/home' />} />
-          <Route path='/home' render={() => <Home chatList={chatList} />} />
+          <Route
+            path='/home'
+            render={() => (
+              <Home chatList={chatList} curDetailChat={curDetailChat} />
+            )}
+          />
           <Route
             path='/chat_room/:userId'
             render={props => {
               if (!curDetailChat.length) {
                 setCurDetailChat(detailChat);
               }
-
-              if (curDetailChat) {
-                return (
-                  <ChatRoom
-                    {...props}
-                    chatList={chatList}
-                    detailChat={curDetailChat}
-                    selectUser={selectUser}
-                    sendMsg={sendMsg}
-                  />
-                );
-              }
+              return (
+                <ChatRoom
+                  {...props}
+                  chatList={chatList}
+                  detailChat={curDetailChat}
+                  selectUser={selectUser}
+                  sendMsg={sendMsg}
+                />
+              );
             }}
           />
         </Switch>

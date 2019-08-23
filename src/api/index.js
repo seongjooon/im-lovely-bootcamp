@@ -6,12 +6,13 @@ export const getChatsList = () => {
     setTimeout(() => {
       const chatListData = chatData.map(user => {
         const chatList = chatDetailData.filter(msg => user.id === msg.user_id);
-        const lastMsg = chatList[chatList.length -1];
-        
+        const lastMsg = chatList[chatList.length - 1];
+
         return {
           id: user.id,
           userName: user.user_name,
-          lastMsg: lastMsg,
+          created_at: lastMsg.created_at,
+          text: lastMsg.text,
           userImage: user.user_image
         };
       });

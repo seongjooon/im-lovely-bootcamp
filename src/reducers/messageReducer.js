@@ -5,7 +5,7 @@ export const messageReducer = (state = [], action) => {
     case SET_NEW_DETAIL_CHAT:
       return state.concat(action.detailChats);
     case SEND_MESSAGE:
-      return state.concat(action.myMsg);
+      return state.concat(action.msgData);
     default:
       return state;
   }

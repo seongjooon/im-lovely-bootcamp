@@ -43,18 +43,10 @@ const mapDispatchToProps = dispatch => {
         detailChats
       });
     },
-    sendMsg(msg) {
-      console.log('sendMsg dispatch');
+    sendMsg(msgData) {
       dispatch({
         type: 'SEND_MESSAGE',
-        myMsg: [
-          {
-            id: 666,
-            user_id: 0,
-            created_at: '10:31',
-            text: msg
-          }
-        ]
+        msgData
       });
     }
   };

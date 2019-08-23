@@ -45,18 +45,51 @@
   background-color: #3B3D4D;
 }
 
-.user-msg-element {
-  width: 100%;
+.my-msg-element {
   height: 45px;
-  margin: 22px 0 30px 22px;
+  padding: 22px 22px 22px 0;
+  text-align: right;
 }
 
-.user-msg-element > img {
+.my-img {
   display: inline-block;
   width: 45px;
   height: 45px;
   border-radius: 100px;
 }
+
+.my-msg {
+  display: inline-block;
+  max-width: 200px;
+  padding: 12px;
+  font-size: 0.9rem;
+  color: #909095;
+  border-radius: 6px;
+  background-color: #FFFFFF;
+  text-align: left;
+  word-break: break-all;
+}
+
+.my-msg-created-at {
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #C1C1C1;
+}
+
+.user-msg-element {
+  height: 45px;
+  padding: 22px 0 22px 22px;
+}
+
+.user-img {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border-radius: 100px;
+}
+
 
 .user-msg {
   display: inline-block;
@@ -88,7 +121,15 @@
   width: inherit;
   height: 33px;
   margin-left: 10px;
+  padding-left: 10px;
   border: none;
+  box-shadow: 0 0 3px green;
+  font-size: 0.85rem;
+}
+
+.send-msg-box:focus {
+  outline-offset: 0px;
+  outline: none;
 }
 
 .send-msg-box::placeholder {
