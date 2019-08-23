@@ -15,7 +15,6 @@ class App extends Component {
     const {
       chatList,
       detailChat,
-      selectUser,
       setCurDetailChat,
       curDetailChat,
       sendMsg
@@ -41,7 +40,6 @@ class App extends Component {
                   {...props}
                   chatList={chatList}
                   detailChat={curDetailChat}
-                  selectUser={selectUser}
                   sendMsg={sendMsg}
                 />
               );

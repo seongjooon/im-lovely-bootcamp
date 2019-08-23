@@ -3,14 +3,105 @@
     "id": 0,
     "user_id": 0,
     "created_at": "2019-08-22T16:38:15.082Z",
-    "text": "Hi~",
+    "text": "qhrhtlvdjdy~",
     "isMine" : false
   },
   {
+    "id": 1,
+    "user_id": 0,
+    "created_at": "2019-08-22T16:38:15.082Z",
+    "text": "skehsy~",
+    "isMine" : true
+  },
+  {
     "id": 2,
+    "user_id": 0,
+    "created_at": "2019-08-22T16:38:15.082Z",
+    "text": "내일 뭐해요?",
+    "isMine" : false
+  },
+  {
+    "id": 3,
     "user_id": 1,
     "created_at": "2019-08-22T16:38:15.082Z",
-    "text": "what r u doin?",
+    "text": "성준이, 가방싸",
+    "isMine" : false
+  },
+  {
+    "id": 4,
+    "user_id": 2,
+    "created_at": "2019-08-22T16:38:15.082Z",
+    "text": "매일매일 회식하자요",
+    "isMine" : false
+  },
+  {
+    "id": 5,
+    "user_id": 3,
+    "created_at": "2019-08-22T16:38:15.082Z",
+    "text": "이상한 사람이네",
+    "isMine" : false
+  },
+  {
+    "id": 6,
+    "user_id": 4,
+    "created_at": "2019-08-22T16:38:15.082Z",
+    "text": "잘 안되면 집가서 쉬어야죠",
+    "isMine" : false
+  },
+  {
+    "id": 7,
+    "user_id": 5,
+    "created_at": "2019-08-22T16:38:15.082Z",
+    "text": "CSS 좀 봐줄까요?",
+    "isMine" : false
+  },
+  {
+    "id": 8,
+    "user_id": 6,
+    "created_at": "2019-08-22T16:38:15.082Z",
+    "text": "오늘 몇시에 가요?",
+    "isMine" : false
+  },
+  {
+    "id": 9,
+    "user_id": 7,
+    "created_at": "2019-08-22T16:38:15.082Z",
+    "text": "침착하게 보시면 잘할 수 있을거에요. 그리고 문서보시면..",
+    "isMine" : false
+  },
+  {
+    "id": 10,
+    "user_id": 8,
+    "created_at": "2019-08-22T16:38:15.082Z",
+    "text": "아이! 깜짝이야!! 지겹다, 지겨워..",
+    "isMine" : false
+  },
+  {
+    "id": 11,
+    "user_id": 9,
+    "created_at": "2019-08-22T16:38:15.082Z",
+    "text": "에휴",
+    "isMine" : false
+  },
+  {
+    "id": 12,
+    "user_id": 10,
+    "created_at": "2019-08-22T16:38:15.082Z",
+    "text": "쏠컴 팬이에여~",
+    "isMine" : false
+  },
+  {
+    "id": 13,
+    "user_id": 11,
+    "created_at": "2019-08-22T16:38:15.082Z",
+    "text": "아이온 합시다~",
+    "isMine" : false
+  },
+  {
+    "id": 14,
+    "user_id": 12,
+    "created_at": "2019-08-22T16:38:15.082Z",
+    "text": "솔루션을 믿어요~",
     "isMine" : false
   }
 ]

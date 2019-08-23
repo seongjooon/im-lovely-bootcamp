@@ -1,12 +1,16 @@
 import { combineReducers } from 'redux';
 import { chatListReducer } from './chatListReducer';
-import { selectUser } from './selectUser';
 import { detailChatReducer } from './detailChatReducer';
 import { messageReducer } from './messageReducer';
+
+export const initState = {
+  chatInitState: [],
+  detailChatInitState: [],
+  messagesInitState: []
+}
 
 export default combineReducers({
   chatListReducer,
   detailChatReducer,
-  selectUser,
   curDetailChat: messageReducer
 });

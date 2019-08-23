@@ -8,10 +8,6 @@ export default class ChatRoom extends Component {
     this.chatRoomWindowRef = React.createRef();
   }
 
-  componentDidMount() {
-    this.props.selectUser();
-  }
-
   handleSendEvent = event => {
     const { detailChat, match, sendMsg } = this.props;
     const selectUserId = Number(match.params.userId);

@@ -31,12 +31,6 @@ const mapDispatchToProps = dispatch => {
         });
       });
     },
-    selectUser(id) {
-      dispatch({
-        type: 'SELECT_USER',
-        id
-      });
-    },
     setCurDetailChat(detailChats) {
       dispatch({
         type: 'SET_NEW_DETAIL_CHAT',

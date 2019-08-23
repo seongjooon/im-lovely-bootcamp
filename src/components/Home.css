@@ -51,10 +51,14 @@ header > .header-text {
 }
 
 .chat-element-right-box .user-text {
+  width: 250px;
   margin-top: 2px; 
   font-size: 0.8rem;
   font-weight: 500;
   color: #A3A0A5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .chat-element-right-box .last-msg-time {

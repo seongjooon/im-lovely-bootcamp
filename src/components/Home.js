@@ -59,26 +59,6 @@ const Home = ({ chatList, curDetailChat }) => {
             </div>
           </Link>
         ))}
-        {/* {newestList.map(chatEl => (
-          <Link to={`/chat_room/${chatEl.id}`} key={chatEl.id}>
-            <div className='chat-element' key={chatEl.id}>
-              <img src={chatEl.userImage} alt={chatEl.id} />
-              <div className='chat-element-right-box'>
-                <div className='last-msg-time'>
-                  {lastMsgList[chatEl.id]
-                    ? lastMsgList[chatEl.id].time.slice(11, 16)
-                    : chatEl.lastMsg.created_at.slice(11, 16)}
-                </div>
-                <div className='user-name'>{chatEl.userName}</div>
-                <div className='user-text'>
-                  {lastMsgList[chatEl.id]
-                    ? lastMsgList[chatEl.id].text
-                    : chatEl.lastMsg.text}
-                </div>
-              </div>
-            </div>
-          </Link>
-        ))} */}
       </div>
     </div>
   );
