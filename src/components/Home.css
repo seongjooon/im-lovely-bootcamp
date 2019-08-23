@@ -16,9 +16,9 @@ header > .header-text {
 }
 
 .chat-list {
+  margin: 0;
   width: 400px;
   height: 641px;
-  margin: 0;
   overflow: auto;
 }
 
@@ -51,8 +51,8 @@ header > .header-text {
 }
 
 .chat-element-right-box .user-text {
-  width: 250px;
   margin-top: 2px; 
+  width: 250px;
   font-size: 0.8rem;
   font-weight: 500;
   color: #A3A0A5;

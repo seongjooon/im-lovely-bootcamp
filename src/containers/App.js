@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import App from '../components/App';
+
 import { getChatsList } from '../api';
 import { getDetailChat } from '../api';
 
@@ -17,36 +18,21 @@ const mapDispatchToProps = dispatch => {
   return {
     onLoad() {
       getChatsList().then(chatList => {
-        dispatch({
-          type: 'INITIALIZE_CHAT_LIST',
-          chatList
-        });
+        dispatch({ type: 'INITIALIZE_CHAT_LIST', chatList });
       });
     },
     getDetailChatFile() {
       getDetailChat().then(detailChat => {
-        dispatch({
-          type: 'GET_DETAIL_CHAT',
-          detailChat
-        });
+        dispatch({ type: 'GET_DETAIL_CHAT', detailChat });
       });
     },
     setCurDetailChat(detailChats) {
-      dispatch({
-        type: 'SET_NEW_DETAIL_CHAT',
-        detailChats
-      });
+      dispatch({ type: 'SET_NEW_DETAIL_CHAT', detailChats });
     },
     sendMsg(msgData) {
-      dispatch({
-        type: 'SEND_MESSAGE',
-        msgData
-      });
+      dispatch({ type: 'SEND_MESSAGE', msgData });
     }
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

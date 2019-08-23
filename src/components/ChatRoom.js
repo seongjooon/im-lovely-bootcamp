@@ -4,7 +4,6 @@ import './ChatRoom.css';
 export default class ChatRoom extends Component {
   constructor(props) {
     super(props);
-
     this.chatRoomWindowRef = React.createRef();
   }
 
@@ -23,6 +22,7 @@ export default class ChatRoom extends Component {
         isMine: true
       }
     ];
+
     if (sendingText) {
       if (event === 'push' || event.key === 'Enter') {
         sendMsg(newMsgData);
@@ -36,9 +36,7 @@ export default class ChatRoom extends Component {
     let selectedUserId = +match.params.userId;
 
     const chatRoomUser = chatList.filter(user => user.id === selectedUserId)[0];
-    const messageList = detailChat.filter(
-      list => list.user_id === chatRoomUser.id
-    );
+    const messageList = detailChat.filter(list => list.user_id === chatRoomUser.id);
 
     return (
       <div>

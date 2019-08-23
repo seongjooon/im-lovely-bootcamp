@@ -1,8 +1,8 @@
+import { initState } from './index';
+
 import { chatListReducer } from './chatListReducer';
 import { detailChatReducer } from './detailChatReducer';
 import { messageReducer } from './messageReducer';
-
-import { initState } from './index';
 
 describe('reducer', () => {
   it('should return init value', () => {
@@ -12,6 +12,7 @@ describe('reducer', () => {
     expect(detailChatReducer(undefined, {})).toEqual(initState.chatInitState);
     expect(messageReducer(undefined, {})).toEqual(initState.chatInitState);
   });
+  
   describe('data of action should return equal value', () => {
     it('in chatListReducer', () => {
       expect(
@@ -36,6 +37,7 @@ describe('reducer', () => {
           userImage: ''
         }
       ]);
+      
       expect(
         chatListReducer(
           [

@@ -16,6 +16,7 @@ export const getChatsList = () => {
           userImage: user.user_image
         };
       });
+      
       resolve(chatListData);
     }, 1000);
   });

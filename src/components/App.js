@@ -19,6 +19,7 @@ class App extends Component {
       curDetailChat,
       sendMsg
     } = this.props;
+
     return (
       <div className='App'>
         <Switch>

@@ -26,16 +26,12 @@ const Home = ({ chatList, curDetailChat }) => {
       id: element.id,
       userName: element.userName,
       userImage: element.userImage,
-      created_at: lastMsgList[element.id]
-        ? lastMsgList[element.id].created_at
-        : element.created_at,
+      created_at: lastMsgList[element.id] ? lastMsgList[element.id].created_at : element.created_at,
       text: lastMsgList[element.id] ? lastMsgList[element.id].text : element.text
     };
   });
 
-  const newestList = lastChatList.sort((a, b) => {
-    return new Date(b.created_at) - new Date(a.created_at);
-  });
+  const newestList = lastChatList.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
 
   return (
     <div>
